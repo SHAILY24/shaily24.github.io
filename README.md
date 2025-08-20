@@ -1,5 +1,9 @@
 # Portfolio Website
 
+[![Website](https://img.shields.io/badge/Website-Live-00C851?style=for-the-badge)](https://shaily24.github.io/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/shailysharma873/)
+[![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:shailysharmawork@gmail.com)
+
 Personal portfolio website showcasing projects and experience across data engineering, full-stack development, and machine learning.
 
 ## Features
@@ -36,7 +40,7 @@ python -m http.server 8000
 
 The site is automatically deployed to GitHub Pages when changes are pushed to the main branch.
 
-Live at: [shaily24.github.io/shaily-portfolio](https://shaily24.github.io/shaily-portfolio)
+Live at: [shaily24.github.io](https://shaily24.github.io/)
 
 ## Structure
 

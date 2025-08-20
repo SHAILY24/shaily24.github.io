@@ -75,6 +75,20 @@ body {
     color: var(--primary);
 }
 
+.nav-linkedin {
+    display: flex;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    background: var(--primary);
+    color: white !important;
+}
+
+.nav-linkedin:hover {
+    background: var(--primary-dark);
+    color: white !important;
+}
+
 .nav-mobile-toggle {
     display: none;
     flex-direction: column;
@@ -126,8 +140,24 @@ body {
 .hero-subtitle {
     font-size: 1.25rem;
     color: var(--text-secondary);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     line-height: 1.6;
+}
+
+.hero-badges {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.hero-badges img {
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.hero-badges a:hover img {
+    transform: translateY(-2px);
 }
 
 .hero-stats {
