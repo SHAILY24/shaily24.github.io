@@ -89,54 +89,11 @@ if (heroTitle) {
     setTimeout(typeWriter, 500);
 }
 
-// Counter animation for stats
-const animateCounter = (element, target, duration = 2000) => {
-    const start = 0;
-    const increment = target / (duration / 16);
-    let current = start;
-    
-    const updateCounter = () => {
-        current += increment;
-        if (current < target) {
-            element.textContent = element.dataset.prefix + Math.floor(current).toLocaleString() + (element.dataset.suffix || '');
-            requestAnimationFrame(updateCounter);
-        } else {
-            element.textContent = element.dataset.prefix + target.toLocaleString() + (element.dataset.suffix || '');
-        }
-    };
-    
-    updateCounter();
-};
-
-// Initialize stat counters when visible
-const statObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting && !entry.target.dataset.animated) {
-            entry.target.dataset.animated = 'true';
-            const value = entry.target.textContent;
-            const match = value.match(/[\d.]+/);
-            if (match) {
-                const num = parseFloat(match[0]);
-                const prefix = value.substring(0, value.indexOf(match[0]));
-                const suffix = value.substring(value.indexOf(match[0]) + match[0].length);
-                
-                entry.target.dataset.prefix = prefix;
-                entry.target.dataset.suffix = suffix;
-                
-                if (suffix.includes('B')) {
-                    animateCounter(entry.target, num);
-                } else if (suffix.includes('M')) {
-                    animateCounter(entry.target, num * 100);
-                } else if (suffix.includes('x')) {
-                    animateCounter(entry.target, num * 1000);
-                }
-            }
-        }
-    });
-}, { threshold: 0.5 });
-
+// Counter animation for stats - disabled to prevent wobbling
+// Stats are now displayed immediately without animation
 document.querySelectorAll('.stat-value').forEach(stat => {
-    statObserver.observe(stat);
+    // Keep the values static - no animation
+    stat.style.transition = 'none';
 });
 
 // Add hover effect to project cards
