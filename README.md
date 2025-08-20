@@ -26,8 +26,8 @@ Personal portfolio website showcasing projects and experience across data engine
 
 1. Clone the repository
 ```bash
-git clone https://github.com/SHAILY24/shaily-portfolio.git
-cd shaily-portfolio
+git clone https://github.com/SHAILY24/shaily24.github.io.git
+cd shaily24.github.io
 ```
 
 2. Open index.html in your browser or use a local server
@@ -45,7 +45,7 @@ Live at: [shaily24.github.io](https://shaily24.github.io/)
 ## Structure
 
 ```
-shaily-portfolio/
+shaily24.github.io/
 ├── index.html          # Main HTML file
 ├── styles.css          # All styles
 ├── script.js           # Interactive features
